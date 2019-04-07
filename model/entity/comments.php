@@ -22,7 +22,7 @@ class comments extends entity{
         return $this->post_id;
     }
 
-    //----------------constructer-------------------
+    //----------------constructor-------------------
     function __construct(aray $data = null){
         if($data){
             $this->hydrate($data);

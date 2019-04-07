@@ -1,5 +1,7 @@
 <?php
 class posts extends entity{
+
+    //-------------attributs----------------------
     protected $title;
     protected $publication_date;
     protected $chapô;
@@ -43,7 +45,7 @@ class posts extends entity{
         return $this->author;
     }
 
-    //----------------constructer-------------------
+    //----------------constructor-------------------
     function __construct(aray $data = null){
         if($data){
             $this->hydrate($data);

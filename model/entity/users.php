@@ -1,5 +1,7 @@
 <?php
 class users extends entity{
+
+    //----------------attributs------------------
     protected $name;
     protected $mail;
     protected $pasword;
