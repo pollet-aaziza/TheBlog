@@ -1,7 +1,7 @@
 <?php
 abstract class commentsManager extends manager{
 
-    //function that retrieves all comments from db
+    //method that retrieves all comments from db
 
     public function getAllComments(){
         $query = $this->_db->query("SELECT * FROM comments");
@@ -9,6 +9,14 @@ abstract class commentsManager extends manager{
         $query->closeCursor();
         return $result;
     }
+
+    //methode that delete a comments from DB
+    function deleteComment($id) {
+        $request = $this->getDb()("DELETE FROM comments WHERE id = ?");
+        $result = $request->execute([$id]);
+        $request->closeCursor();
+        return $result;
+      }
 
 }
 ?>
