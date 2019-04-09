@@ -2,21 +2,20 @@
  <html class="no-js" lang="fr">
 
   <head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Blog</title>
-<meta name="description" content="L'application d'emargement de l'ADEP">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Blog</title>
+  <meta name="description" content="L'application d'emargement de l'ADEP">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="public/css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<body>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
+  <!-- ====================================start of header============================= -->
+<header>
+ <div class="jumbotron jumbotron-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,5 +46,10 @@
       </li>
     </ul>
   </div>
-</nav>
-</div>
+ </nav>
+ </div>
+</header>
+<!-- ====================================end of header============================= -->
+
+<!-- ====================================start of main============================= -->
+<main>
