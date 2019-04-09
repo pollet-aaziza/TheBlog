@@ -21,12 +21,16 @@ include "template/header.php";
                 <p class="card-text"><?php echo $post["author"] ?></p>
                 <p class="card-text"><?php echo $post["publication_date"] ?></p>
                 <p class="card-text"><?php echo $post["chapô"] ?></p>
+                <a class="btn" href="postDelete?id=<?php echo $category->getCategories()?>">Supprimer</a>
+    
             <?php
-            var_dump($posts);
+          
             //we loop to retrieve all comments
             foreach ($comments as $key => $comment) {
             ?>      
             <p class="card-text"><?php echo $post["contennts"] ?></p>
+            <a class="btn" href="commentDelete?id=<?php echo $category->getCategories()?>">Supprimer</a>
+
               </div>
               <div class="card-body">
                 <?php
