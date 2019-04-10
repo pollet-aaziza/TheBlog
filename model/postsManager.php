@@ -18,18 +18,20 @@ class postsManager extends manager{
         $db = $this->getDb();
         $query = $db->prepare("SELECT * FROM posts WHERE id = ?");
         $query->execute([$id]);
-        $result = $query->fetch(PDO::FETCH_CLASS, "posts");
+        $query->setFetchMode(PDO::FETCH_CLASS, "posts");
+        $result = $query->fetch();
+        return $result;
     }
 
     //method that add a post to DB
     //methode that delete a post from DB
-    // function deletePost($id)
-    // {
-    //     $request = $this->getDb()("DELETE FROM posts WHERE id = ?");
-    //     $result = $request->execute([$id]);
-    //     $request->closeCursor();
-    //     return $result;
-    //   }
+    function deletePost($id)
+    {
+        $request = $this->getDb()("DELETE FROM posts WHERE id = ?");
+        $result = $request->execute([$id]);
+        $request->closeCursor();
+        return $result;
+      }
 
 }
 ?>

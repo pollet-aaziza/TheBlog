@@ -26,7 +26,7 @@ class postController
       $id = htmlspecialchars($_GET("id"));
       $postsManager = new postsManager();
       if($postsManager->deletePost($id))
-      redirectTo("../template/post.php");
+      redirectTo("views/posts.php");
     }
   }
 }
