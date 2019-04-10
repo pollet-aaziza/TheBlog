@@ -1,9 +1,10 @@
 <?php
-abstract class  manager{
+include "dataBase.php";
+abstract class manager{
 
 
     //-----------------attributs----------
-    protected $_db;
+    protected $db;
 
     //----------------constructor---------
     public function __construct(){
@@ -12,12 +13,12 @@ abstract class  manager{
 
     //----------------setters------------
     public function setDb($connection){
-        $this->_db = $connection;
+        $this->db = $connection;
     }
 
     //-----------------getters----------
     public function getDb(){
-        return $this>_db;
+        return $this->db;
     }
 
 }

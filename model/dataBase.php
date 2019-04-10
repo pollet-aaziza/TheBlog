@@ -1,5 +1,5 @@
 <?php
-class datbase{
+class dataBase {
 
     //----------attributs--------
     const host = "localhost";
