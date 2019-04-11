@@ -1,10 +1,11 @@
 <?php
+include "entity.php";
 class posts extends entity{
 
     //-------------attributs----------------------
     protected $title;
     protected $publication_date;
-    protected $chapô;
+    protected $chapo;
     protected $contents;
     protected $author;
 
@@ -16,8 +17,8 @@ class posts extends entity{
     public function setPublication_date(int $publication_date){
         $this->publication_date = $publication_date;
     }
-    public function setChapô(string $chapô){
-        $this->chapô = $chapô;
+    public function setChapo(string $chapo){
+        $this->chapô = $chapo;
     }
     public function setContents(string $contents){
         $this->contents = $contents;
@@ -35,8 +36,8 @@ class posts extends entity{
         return $this->publication_date;
     }
 
-    public function getChapô(){
-        return $this->chapô;
+    public function getChapo(){
+        return $this->chapo;
     }
     public function getContents(){
         return $this->contents;

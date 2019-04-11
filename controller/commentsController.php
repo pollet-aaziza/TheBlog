@@ -1,20 +1,22 @@
 <?php
+include "model/commentManager.php";
 class commentsController
 {
     //get comments
     function listComments()
     {
-        $commentsManager = new commentsManager();
+        $commentsManager = new commentManager();
         $comments =$commentsManager->getAllComments();
-        require "views/comments.php";
+        require "../views/comments.php";
     }
+
     //delete comment
-  public function deleteComment(){
+    function deleteComment(){
     if(isset($_GET["id"])) {
       $id = htmlspecialchars($_GET("id"));
-      $commentsManager = new commentsManager();
+      $commentsManager = new commentManager();
       if($commentsManager->deletePost($id))
-      redirectTo("");
+      redirectTo("../template/post.php");
     }
   }
 }

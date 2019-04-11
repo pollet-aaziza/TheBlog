@@ -1,4 +1,5 @@
 <?php
+include "entity.php";
 class comments extends entity{
     protected $contents;
     protected $post_id;
