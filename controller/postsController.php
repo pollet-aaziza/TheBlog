@@ -1,5 +1,4 @@
 <?php
-include "model/postsManager.php";
 class postController
 {
     //get posts
@@ -15,19 +14,22 @@ class postController
 {
     $postsManager = new postsManager();
     $post = $postsManager->getPostById($_GET['id']);
-    require('views/post.php');
+    $commentsManager = new commentsManager();
+    $comments = $commentsManager->getCommentById($_GET['id']);
+    var_dump($comments);
+    require "views/post.php";
 }
-    
+   
   //delete gategory
-  public function showDeletePost()
-  {
-    if(isset($_GET["id"])) 
-    {
-      $id = htmlspecialchars($_GET("id"));
-      $postsManager = new postsManager();
-      if($postsManager->deletePost($id))
-      redirectTo("views/posts.php");
-    }
-  }
+  // public function showDeletePost()
+  // {
+  //   if(isset($_GET["id"])) 
+  //   {
+  //     $id = htmlspecialchars($_GET("id"));
+  //     $postsManager = new postsManager();
+  //     if($postsManager->deletePost($id))
+  //     redirectTo("views/posts.php");
+  //   }
+  // }
 }
 ?>

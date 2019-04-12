@@ -1,4 +1,10 @@
 <?php
+include "model/entity/entity.php";
+include "model/manager.php";
+include "model/entity/posts.php";
+include "model/entity/comments.php";
+include "model/postsManager.php";
+include "model/commentsManager.php";
 require "controller/postsController.php";
 
 $postsController = new postController();

@@ -2,7 +2,7 @@
  <html class="no-js" lang="fr">
 
   <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Blog</title>
   <meta name="description" content="L'application d'emargement de l'ADEP">

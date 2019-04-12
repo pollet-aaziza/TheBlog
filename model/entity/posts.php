@@ -1,12 +1,11 @@
 <?php
-include "entity.php";
 class posts extends entity{
 
     //-------------attributs----------------------
     protected $title;
     protected $publication_date;
     protected $chapo;
-    protected $contents;
+    protected $content;
     protected $author;
 
     //------------------Setters--------------------
@@ -20,8 +19,8 @@ class posts extends entity{
     public function setChapo(string $chapo){
         $this->chapô = $chapo;
     }
-    public function setContents(string $contents){
-        $this->contents = $contents;
+    public function setContent(string $content){
+        $this->contents = $content;
     }
     public function setAuthor(string $author){
         $this->author = $author;
@@ -39,15 +38,15 @@ class posts extends entity{
     public function getChapo(){
         return $this->chapo;
     }
-    public function getContents(){
-        return $this->contents;
+    public function getContent(){
+        return $this->content;
     }
     public function getAuthor(){
         return $this->author;
     }
 
     //----------------constructor-------------------
-    function __construct(aray $data = null){
+    function __construct(array $data = null){
         if($data){
             $this->hydrate($data);
         }
