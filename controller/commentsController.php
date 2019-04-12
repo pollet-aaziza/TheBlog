@@ -1,17 +1,22 @@
 <?php
-include "model/commentManager.php";
 class commentsController
 {
     //get comments
-    function listComments()
+    function showListComments()
     {
         $commentsManager = new commentManager();
         $comments =$commentsManager->getAllComments();
         require "../views/comments.php";
     }
 
+    //get one comment
+    function showOnecomment(){
+      $commentManager = new commentManager();
+      $comment = $commentManager->getCommentById($_GET["id"]);
+    }
+
     //delete comment
-    function deleteComment(){
+    function ShowDeleteComment(){
     if(isset($_GET["id"])) {
       $id = htmlspecialchars($_GET("id"));
       $commentsManager = new commentManager();
