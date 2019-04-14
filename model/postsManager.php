@@ -1,4 +1,5 @@
 <?php
+
 class postsManager extends manager{
 
     //methode that retrieves all posts from db

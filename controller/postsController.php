@@ -6,7 +6,7 @@ class postController
     {
         $postsManager = new postsManager();
         $posts =$postsManager->getAllPosts();
-        require "views/posts.php";
+        require "views/postsView.php";
     }
 
     //get one post
@@ -16,20 +16,19 @@ class postController
     $post = $postsManager->getPostById($_GET['id']);
     $commentsManager = new commentsManager();
     $comments = $commentsManager->getCommentById($_GET['id']);
-    var_dump($comments);
-    require "views/post.php";
+    require "views/postView.php";
 }
    
-  //delete gategory
-  // public function showDeletePost()
-  // {
-  //   if(isset($_GET["id"])) 
-  //   {
-  //     $id = htmlspecialchars($_GET("id"));
-  //     $postsManager = new postsManager();
-  //     if($postsManager->deletePost($id))
-  //     redirectTo("views/posts.php");
-  //   }
-  // }
+  //delete post
+  public function showDeletePost()
+  {
+    if(isset($_GET["id"])) 
+    {
+      $id = htmlspecialchars($_GET("id"));
+      $postsManager = new postsManager();
+      if($postsManager->deletePost($id))
+      redirectTo("views/postsView.php");
+    }
+  }
 }
 ?>

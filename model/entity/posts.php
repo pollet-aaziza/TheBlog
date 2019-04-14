@@ -1,4 +1,5 @@
 <?php
+
 class posts extends entity{
 
     //-------------attributs----------------------

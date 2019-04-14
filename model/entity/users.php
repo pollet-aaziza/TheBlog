@@ -5,7 +5,8 @@ class users extends entity{
     protected $name;
     protected $mail;
     protected $pasword;
-    protected $status;
+   
+   
 
     //------------------Setters--------------------
 
@@ -18,10 +19,8 @@ class users extends entity{
     public function setPasword(string $pasword){
         $this->pasword = $pasword;
     }
-    public function setStatus(string $status){
-        $this->statuss = $status;
-    }
-
+     
+    
 
     //------------------Getters--------------------
     public function getName(){
@@ -34,11 +33,10 @@ class users extends entity{
     public function getPasword(){
         return $this->password;
     }
-    public function getStatus(){
-        return $this->status;
-    }
+    
+    
     //----------------constructer-------------------
-    function __construct(aray $data = null){
+    function __construct(array $data = null){
         if($data){
             $this->hydrate($data);
         }

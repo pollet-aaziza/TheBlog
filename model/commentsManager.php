@@ -24,13 +24,13 @@ class commentsManager extends manager{
      }
 
 
-    //methode that delete a comments from DB
-    // function deleteComment($id) {
-    //     $request = $this->getDb()("DELETE FROM comments WHERE id = ?");
-    //     $result = $request->execute([$id]);
-    //     $request->closeCursor();
-    //     return $result;
-    //   }
+    //methode that delete a comment from DB
+    function deleteComment($id) {
+        $request = $this->getDb()("DELETE FROM comments WHERE id = ?");
+        $result = $request->execute([$id]);
+        $request->closeCursor();
+        return $result;
+      }
 
 }
 ?>
