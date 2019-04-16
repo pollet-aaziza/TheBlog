@@ -13,10 +13,10 @@ class usersManager extends manager{
 
 
     //methode that retrieves one user from db
-    public function getUserById($id){
+    public function getUserByName($userName){
         $db = $this->getDb();
-        $query = $db->prepare("SELECT * FROM users WHERE users.id=?");
-        $query->execute([$id]);
+        $query = $db->prepare("SELECT * FROM users WHERE users.name=?");
+        $query->execute([$userName]);
         $query->setFetchMode(PDO::FETCH_CLASS, "users");
         $result = $query->fetch();
         return $result;
