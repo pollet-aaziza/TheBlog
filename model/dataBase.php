@@ -6,6 +6,7 @@ class dataBase {
     const dbName ="axecible";
     const login ="phpmyadmin";
     const pw ="Manzakin2603";
+    
 
     //-----------methods---------
     static public function DB(){

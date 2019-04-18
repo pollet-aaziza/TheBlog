@@ -23,7 +23,7 @@ class comments extends entity{
     }
 
     //----------------constructor-------------------
-    function __construct(aray $data = null){
+    function __construct(array $data = null){
         if($data){
             $this->hydrate($data);
         }

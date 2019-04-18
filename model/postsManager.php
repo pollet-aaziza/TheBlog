@@ -1,4 +1,5 @@
 <?php
+
 class postsManager extends manager{
 
     //methode that retrieves all posts from db
@@ -22,7 +23,7 @@ class postsManager extends manager{
     }
 
     //method that add a post to DB
-
+    
 
     //methode that delete a post from DB
     function deletePost($id)

@@ -1,12 +1,12 @@
 <?php
-class postController
+class adminController
 {
     //get posts
     function showListPosts()
     {
         $postsManager = new postsManager();
         $posts =$postsManager->getAllPosts();
-        require "views/postsView.php";
+        require "admin/posts.php";
     }
 
     //get one post
@@ -16,7 +16,7 @@ class postController
     $post = $postsManager->getPostById($_GET['id']);
     $commentsManager = new commentsManager();
     $comments = $commentsManager->getCommentById($_GET['id']);
-    require "views/postView.php";
+    require "admin/post.php";
 }
    
   //delete post
@@ -27,7 +27,7 @@ class postController
       $id = htmlspecialchars($_GET("id"));
       $postsManager = new postsManager();
       if($postsManager->deletePost($id))
-      redirectTo("views/postsView.php");
+      redirectTo("admin/post.php");
     }
   }
 }

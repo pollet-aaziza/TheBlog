@@ -6,7 +6,7 @@ class commentsController
     {
         $commentsManager = new commentManager();
         $comments =$commentsManager->getAllComments();
-        require "../views/comments.php";
+        require "views/postView.php";
     }
 
     //get one comment
@@ -21,7 +21,7 @@ class commentsController
       $id = htmlspecialchars($_GET("id"));
       $commentsManager = new commentManager();
       if($commentsManager->deletePost($id))
-      redirectTo("../template/post.php");
+      redirectTo("views/postview.php");
     }
   }
 }

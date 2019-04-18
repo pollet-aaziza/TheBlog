@@ -9,7 +9,11 @@ include "template/header.php";
         <p class="card-text"><?php echo $post->getContent() ?></p>
         <p class="card-text"><?php echo $post->getAuthor()?></p>
         <p class="card-text"><?php echo $post->getPublication_date() ?></p>
-        <?php
+        
+      </div>
+      </div>
+  </article>  
+  <?php
             //we loop to retrieve all posts
             foreach ($comments as $key => $comment) 
             {
@@ -17,7 +21,6 @@ include "template/header.php";
         <p class="card-text"><?php echo $comment->getContents() ?></p>
        <?php
             }
-            ?>
-      </div>
-      </div>
-  </article>       
+          
+  require "template/footer.php";
+  ?>     
