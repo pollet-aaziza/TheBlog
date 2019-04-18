@@ -7,7 +7,10 @@ include "model/postsManager.php";
 include "model/commentsManager.php";
 require "controller/postsController.php";
 require "controller/adminController.php";
+require "controller/usersController.php";
 
+// $usercontroller = new userController();
+// if()
 $postsController = new postController();
 
 if(!empty($_GET["target"])) {

@@ -2,10 +2,10 @@
 include "template/header.php";
  ?>
 
- <div class="row mt-5">
+ <div class="row mt-5 container">
     <section class="col-lg-9 t_center">
       <h2>Nos derniers articles</h2>
-      <div class="container-fluide">
+      <div class="container">
         <div class="row">
           <?php
             //we loop to retrieve all posts

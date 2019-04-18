@@ -5,9 +5,17 @@ require "template/header.php";
 <section>
     <img src="" alt="">
     <h1>Aaziza Oubalaid</h1>
-    <p>Bienvenu sur mon blog, installez-vous confortablement. Vous allez apprendre à devenir developpeur web en  6 mois.</p>
+    <p>Bienvenue sur mon blog, installez-vous confortablement. Vous allez apprendre à devenir developpeur web en  6 mois.</p>
 </section>
 <?php
 require "form/contact.php";
 ?>
+<ul>Contactez moi:
+    <li>aaziza.pollet@gmail.com</li>
+<ul>
+<?php
+require "template/footer.php";
+?>
+
+
 
