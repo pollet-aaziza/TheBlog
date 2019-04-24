@@ -11,13 +11,13 @@ class postController
 
     //get one post
     function ShowPost()
-{
+   {
     $postsManager = new postsManager();
     $post = $postsManager->getPostById($_GET['id']);
     $commentsManager = new commentsManager();
     $comments = $commentsManager->getCommentById($_GET['id']);
     require "views/postView.php";
-}
+   }
    
   //delete post
   public function showDeletePost()
