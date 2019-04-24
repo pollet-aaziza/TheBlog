@@ -12,6 +12,9 @@ include "template/header.php";
         
       </div>
       </div>
+      <a class="btn btn-primary" href="index.php?id=<?php echo $post["id"]; ?>&action=updatePost">Modifier</a>
+      <a class="btn btn-primary" href="index.php?id=<?php echo $post["id"]; ?>&action=deletePost">Supprimer</a>
+             
   </article>  
   <?php
             //we loop to retrieve all posts
